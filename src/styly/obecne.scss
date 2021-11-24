@@ -1,0 +1,24 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: grid;
+	min-height: 100vh;
+}
+
+.hlavni_nadpis {
+	font-size: 2rem;
+}
+
+.podnadpis {
+	font-size: 1.5rem;
+}

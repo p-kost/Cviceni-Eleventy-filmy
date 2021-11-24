@@ -1,0 +1,55 @@
+---
+layout: zakladni
+pagination:
+  data: filmy
+  size: 1
+  alias: film
+permalink: "/film/{{ film.nazev | slug }}/"
+---
+
+<div class="detail">
+  <h2 class="hlavni_nadpis">{{ film.nazev }}</h2>
+
+	<dl class="detail__podrobnosti">
+    <div>
+        <dt class="detail__popisek">Rok:</dt>
+        <dd class="detail__polozka">{{ film.rok }}</dd>
+    </div>
+
+    <div>
+        <dt class="detail__popisek">Země:</dt>
+        <dd class="detail__polozka">{{ film.zeme | join(', ') }}</dd>
+    </div>
+
+    <div>
+        <dt class="detail__popisek">Žánr:</dt>
+        <dd class="detail__polozka">{{ film.zanr | join(', ') }}</dd>
+    </div>
+
+    <div>
+        <dt class="detail__popisek">Délka:</dt>
+        <dd class="detail__polozka">{{ film.delka }} minut</dd>
+    </div>
+	</dl>
+
+  	<h3 class="podnadpis">Obsah</h3>
+	    <p class="detail__obsah">
+        {{ film.obsah.text }} 
+        <span class="autor__samotneJmeno">
+            {% if film.obsah.autor.odkaz %}
+            (<a class="autor__odkaz" href="{{ film.obsah.autor.odkaz }}">{{ film.obsah.autor.jmeno }}</a>)
+            {% else %}
+            <span>({{film.obsah.autor.jmeno}})</span>
+            {% endif %}
+        </span>
+    </p>
+
+
+</div>  
+
+
+
+				
+
+    
+	

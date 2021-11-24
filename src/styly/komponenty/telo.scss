@@ -1,0 +1,19 @@
+.telo {
+    max-width: $sirka-obsahu;
+    width:100%;
+    margin: 0 auto;
+
+    &__seznam {
+        padding:$mezera-od-okraju;
+        list-style: square;
+        color: $doplnkova-barva;
+    }
+
+    &__odkaz {
+        text-decoration: none;
+    }
+
+    &__odkaz:hover {
+        text-decoration: underline;
+    }
+}
